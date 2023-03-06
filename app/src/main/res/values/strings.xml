@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Finnish Parliament</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_view">main_view</string>
+    <string name="title">Finland political party</string>
+    <string name="comment">write a comment</string>
+    <string name="image">memberImage</string>
+    <string name="add">Add Button</string>
+    <string name="rating">Rate our member from 1 – 5</string>
+    <string name="submit">submit</string>
+    <string name="name">Name: %s, %s</string>
+    <string name="birthday">Birth Date: %s</string>
+    <string name="constituency">Constituency: %s</string>
+    <string name="party">Party: %s</string>
+    <string name="type">Member type: %s</string>
+    <string name="twitter">Twitter: %s</string>
+    <string name="add_review">Add Review</string>
+    <string name="check_review">Check Review</string>
+    <string name="reviews">Reviews</string>
+</resources>

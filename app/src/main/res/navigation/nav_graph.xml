@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/partyListFragment2">
+
+    <fragment
+        android:id="@+id/partyListFragment2"
+        android:name="com.example.appeduskunta.fragments.PartyListFragment"
+        android:label="PartyListFragment"
+        tools:layout = "@layout/fragment_party_list">
+        <action
+            android:id="@+id/action_partyListFragment2_to_memberInfoFragment"
+            app:destination="@id/memberInfoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/memberInfoFragment"
+        android:name="com.example.appeduskunta.fragments.MemberInfoFragment"
+        android:label="fragment_member_info"
+        tools:layout="@layout/fragment_member_info" >
+        <argument
+            android:name="item_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_memberInfoFragment_to_memberDetailsFragment"
+            app:destination="@id/memberDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/memberDetailsFragment"
+        android:name="com.example.appeduskunta.fragments.MemberDetailsFragment"
+        android:label="fragment_member_details"
+        tools:layout="@layout/fragment_member_details">
+        <argument
+            android:name="item_new_name"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_memberDetailsFragment_to_reviewCheckFragment"
+            app:destination="@id/reviewCheckFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_memberDetailsFragment_to_reviewAddFragment"
+            app:destination="@id/reviewAddFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewCheckFragment"
+        android:name="com.example.appeduskunta.viewmodels.ReviewCheckFragment"
+        android:label="ReviewCheckFragment"
+        tools:layout="@layout/fragment_review_check">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewAddFragment"
+        android:name="com.example.appeduskunta.fragments.ReviewAddFragment"
+        android:label="fragment_review_add"
+        tools:layout="@layout/fragment_review_add" >
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_reviewAddFragment_to_reviewCheckFragment"
+            app:destination="@id/reviewCheckFragment" />
+    </fragment>
+</navigation>
